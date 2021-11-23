@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body{
+          display:flex;
+          justify-content: center;
+          align-items:center;
+          background-color:blueviolet;
+      }
+      .menu{
+          width:300px;
+          height:300px;
+          background-color:darkblue;
+          position: relative;
+          top:250px;
+          border-radius:16px;
+          overflow: hidden;
+      }
+      .menu::before{
+          content:"";
+          position: absolute;
+          width:60px;
+          height:500px;
+          left:120px;
+          top:-100px;
+          background-color:white;
+          animation:animate 6s linear infinite;
+      }
+      .menu::after{
+          content:"";
+          position: absolute;
+          inset:9px;
+          border-radius: 16px;
+          background:blueviolet;
+      }
+      @keyframes animate{
+          0%{
+              transform: rotate(0deg);
+          }
+          100%{
+              transform: rotate(360deg);
+          }
+      }
+      h1{
+          position: relative;
+          top:250px;
+          left:-220px;
+      }
+    </style>
+</head>
+<body>
+   <div class="menu"></div>
+   <h1>YOKESH</h1>
+</body>
+</html>
